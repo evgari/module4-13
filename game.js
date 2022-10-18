@@ -42,7 +42,7 @@
           computerFigure === 'scissors' && playerFigure === 'rock' ||
           computerFigure === 'paper' && playerFigure === 'scissors') {
           alert(`computer: ${computerFigure}\n player:
-            ${playerFigure}\n player win`);
+            ${playerFigure}\n player win`.trim());
           result.player += 1;
         }
 
@@ -50,19 +50,20 @@
           computerFigure === 'scissors' && playerFigure === 'paper' ||
           computerFigure === 'paper' && playerFigure === 'rock') {
           alert(`computer: ${computerFigure}\n player:
-            ${playerFigure}\n computer win`);
+            ${playerFigure}\n computer win`).trim();
           result.computer += 1;
         }
 
         if (computerFigure === playerFigure) {
-          alert(`computer: ${computerFigure}\n player: ${playerFigure}\n draw`);
+          alert(`computer: ${computerFigure}\n
+            player: ${playerFigure}\n draw`.trim());
         }
 
         if (confirm('again?')) {
           return start();
         } else {
           alert(`Result:\n Computer: ${result.computer}\n
-            Player: ${result.player}`);
+            Player: ${result.player}`.trim());
           return;
         }
       } else {
@@ -70,7 +71,7 @@
           computerFigure === 'ножницы' && playerFigure === 'камень' ||
           computerFigure === 'бумага' && playerFigure === 'ножницы') {
           alert(`компьютер: ${computerFigure}\n
-            игрок:${playerFigure}\n игрок выиграл`);
+            игрок:${playerFigure}\n игрок выиграл`.trim());
           result.player += 1;
         }
 
@@ -78,20 +79,20 @@
           computerFigure === 'ножницы' && playerFigure === 'бумага' ||
           computerFigure === 'бумага' && playerFigure === 'камень') {
           alert(`компьютер: ${computerFigure}\n
-            игрок: ${playerFigure}\n компьютер выиграл`);
+            игрок: ${playerFigure}\n компьютер выиграл`.trim());
           result.computer += 1;
         }
 
         if (computerFigure === playerFigure) {
           alert(`компьютер: ${computerFigure}\n
-            игрок: ${playerFigure}\n ничья`);
+            игрок: ${playerFigure}\n ничья`.trim());
         }
 
         if (confirm('ещё?')) {
           return start();
         } else {
           alert(`Результат:\n Компьютер: ${result.computer}\n
-            Игрок: ${result.player}`);
+            Игрок: ${result.player}`.trim());
           return;
         }
       }
