@@ -41,59 +41,75 @@
         if (computerFigure === 'rock' && playerFigure === 'paper' ||
           computerFigure === 'scissors' && playerFigure === 'rock' ||
           computerFigure === 'paper' && playerFigure === 'scissors') {
-          alert(`computer: ${computerFigure}\n player:
-            ${playerFigure}\n player win`.trim());
+          alert(`computer: ${computerFigure}
+            player: ${playerFigure}
+            player win`.trim());
           result.player += 1;
         }
 
         if (computerFigure === 'rock' && playerFigure === 'scissors' ||
           computerFigure === 'scissors' && playerFigure === 'paper' ||
           computerFigure === 'paper' && playerFigure === 'rock') {
-          alert(`computer: ${computerFigure}\n player:
-            ${playerFigure}\n computer win`).trim();
+          alert(`computer: ${computerFigure}
+            player: ${playerFigure}
+            computer win`.trim());
           result.computer += 1;
         }
 
         if (computerFigure === playerFigure) {
-          alert(`computer: ${computerFigure}\n
-            player: ${playerFigure}\n draw`.trim());
+          alert(`computer: ${computerFigure}
+            player: ${playerFigure}
+            draw`.trim());
         }
 
         if (confirm('again?')) {
           return start();
         } else {
-          alert(`Result:\n Computer: ${result.computer}\n
+          if (confirm('are you sure?')) {
+            alert(`Result:
+            Computer: ${result.computer}
             Player: ${result.player}`.trim());
-          return;
+            return;
+          } else {
+            return start();
+          }
         }
       } else {
         if (computerFigure === 'камень' && playerFigure === 'бумага' ||
           computerFigure === 'ножницы' && playerFigure === 'камень' ||
           computerFigure === 'бумага' && playerFigure === 'ножницы') {
-          alert(`компьютер: ${computerFigure}\n
-            игрок:${playerFigure}\n игрок выиграл`.trim());
+          alert(`компьютер: ${computerFigure}
+            игрок: ${playerFigure} 
+            игрок выиграл`.trim());
           result.player += 1;
         }
 
         if (computerFigure === 'камень' && playerFigure === 'ножницы' ||
           computerFigure === 'ножницы' && playerFigure === 'бумага' ||
           computerFigure === 'бумага' && playerFigure === 'камень') {
-          alert(`компьютер: ${computerFigure}\n
-            игрок: ${playerFigure}\n компьютер выиграл`.trim());
+          alert(`компьютер: ${computerFigure}
+            игрок: ${playerFigure}
+            компьютер выиграл`.trim());
           result.computer += 1;
         }
 
         if (computerFigure === playerFigure) {
-          alert(`компьютер: ${computerFigure}\n
-            игрок: ${playerFigure}\n ничья`.trim());
+          alert(`компьютер: ${computerFigure}
+            игрок: ${playerFigure}
+            ничья`.trim());
         }
 
         if (confirm('ещё?')) {
           return start();
         } else {
-          alert(`Результат:\n Компьютер: ${result.computer}\n
+          if (confirm('вы уверены?')) {
+            alert(`Результат:
+            Компьютер: ${result.computer}
             Игрок: ${result.player}`.trim());
-          return;
+            return;
+          } else {
+            return start();
+          }
         }
       }
     };
