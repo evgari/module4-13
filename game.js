@@ -18,7 +18,7 @@
       case lang[2][0]:
         return lang[2];
       default:
-        getFigure(lang);
+        return getFigure(lang);
     }
   };
 
